@@ -12,7 +12,7 @@ scrollLinks.forEach(item => {
 
 burger.addEventListener("click", () => {
     if (burger.classList.contains("active") && menu.classList.contains("active") && document.body.classList.contains("active")){
-        burger.classList.remove("active"); menu.classList.remove("active"); document.body.classList.remove("active")
+        document.body.classList.remove("active"); burger.classList.remove("active"); menu.classList.remove("active");
     }else{
         burger.classList.add("active"); menu.classList.add("active"); document.body.classList.add("active")
     }
