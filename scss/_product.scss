@@ -1,0 +1,80 @@
+.product {
+    padding: 120px 0 60px 0;
+    background: #E1E1C2;
+
+    &__title {
+        text-align: center;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 139%;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #91916C;
+        position: relative;
+        margin-bottom: 76px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border: 3px solid #91916C;
+            width: 288px;
+        }
+    }
+
+    &__subtitle {
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 139%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #65653E;
+        margin-bottom: 51px;
+    }
+
+    &__slider{
+        position: relative;
+    }
+
+    &__slider-wrapper{
+        text-align: center;
+    }
+
+    &__slider-slide img{
+        max-width: 100%;
+    }
+
+    &__slider-prev,
+    &__slider-next{
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        z-index: 50;
+    }
+
+    &__slider-prev{
+        left: 0;
+    }
+
+    &__slider-next{
+        right: 0;
+    }
+
+    @media screen and (max-width: 570px){
+        &{
+            padding: 60px 0px 60px;
+        }
+
+        &__title{
+            font-size: 25px;
+        }
+
+        &__subtitle{
+            font-size: 30px;
+        }
+    }
+}

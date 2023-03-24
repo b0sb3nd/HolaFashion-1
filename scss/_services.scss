@@ -1,0 +1,115 @@
+.services {
+    padding: 84px 0 60px 0px;
+
+    &__title {
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 139%;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #91916C;
+        position: relative;
+        margin-bottom: 76px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border: 3px solid #91916C;
+            width: 288px;
+            bottom: -24px;
+        }
+    }
+
+    &__subtitle {
+        font-family: 'Playfair Display', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 139%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #E5A985;
+        margin-bottom: 71px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper-item-subtitle {
+        font-family: 'Nunito Sans';
+        font-size: 24px;
+        line-height: 138.5%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #000000;
+        padding: 25px 0px;
+    }
+
+    &__wrapper-item:nth-child(2) &__wrapper-item-img {
+        margin-top: -26px;
+    }
+
+    &__wrapper-item-img{
+        border-radius: 20px;
+    }
+
+    &__wrapper-item {
+        background: #FAE3D8;
+        border-radius: 20px;
+        flex: 1 1 33.33%;
+    }
+
+    &__wrapper-item:nth-child(2){
+        background: #91916C;
+        margin: 0 20px;
+        box-shadow: 10px 10px 35px 2px rgba(89, 56, 14, 0.1);
+    }
+
+    &__wrapper-item:nth-child(2) &__wrapper-item-subtitle{
+        color: #fff;
+    }
+
+    @media screen and (max-width: 1156px){
+
+        &__wrapper{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__wrapper-item:nth-child(2) &__wrapper-item-img {
+            margin-top: 0;
+        }
+
+        &__wrapper-item{
+            margin-bottom: 40px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        &__wrapper-item:nth-child(2){
+            margin-bottom: 40px;
+        }
+
+        &__wrapper-subtitle{
+            margin-bottom: 40px;
+        }
+    }
+
+    @media screen and (max-width: 454px) {
+        &__subtitle{
+            font-size: 35px;
+        }
+    }
+
+    @media screen and (max-width: 416px){
+        &__wrapper-item-img img{
+            width: 340px;
+        }
+    }
+}

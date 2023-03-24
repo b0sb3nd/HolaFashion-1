@@ -1,0 +1,142 @@
+.intro {
+    scroll-behavior: smooth;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__img {
+        height: 860px;
+
+        & img {
+            position: absolute;
+            bottom: 0;
+            left: -160px;
+            z-index: -1;
+            top: 0;
+        }
+    }
+
+    &__text-title {
+        font-family: 'Playfair Display', sans-serif;
+        max-width: 600px;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 139%;
+        letter-spacing: 0.02em;
+        color: #E5A985;
+        margin-bottom: 39px;
+    }
+
+    &__text-subtitle {
+        font-family: 'Nunito Sans', sans-serif;
+        max-width: 576px;
+        font-size: 24px;
+        line-height: 171%;
+        letter-spacing: 0.02em;
+        color: #4A4747;
+        margin-bottom: 67px;
+    }
+
+    &__text-inputWrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text-input {
+        width: 60%;
+        background: #E5E5E5;
+        border-radius: 8px 0px 0px 8px;
+        height: 58px;
+        padding-left: 30px;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 135.5%;
+        color: #000;
+
+        &::placeholder {
+            color: #C4C4C4;
+        }
+    }
+
+    &__text-button {
+        font-family: 'Nunito Sans';
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 135.5%;
+        color: #FFFFFF;
+        padding: 16px 18px;
+        background: #91916C;
+        border-radius: 0px 8px 8px 0px;
+        margin-left: 15px;
+    }
+
+    @media screen and (max-width: 1484px) {
+        &__img {
+
+            & img {
+                left: 0;
+            }
+        }
+
+        &__text-title {
+            text-shadow: 1px 0 1px #000,
+                0 1px 1px #000,
+                -1px 0 1px #000,
+                0 -1px 1px #000;
+        }
+    }
+
+    @media screen and (max-width: 946px){
+        &__img {
+            display: none;
+        }
+
+        &__container{
+            align-items: initial;
+            justify-content: center;
+        }
+    
+        &__text-title{
+            text-align: center;
+            text-shadow: none;
+        }
+
+        &__text-subtitle{
+            text-align: center;
+        }
+
+        &__text-inputWrapper{
+            justify-content: center;
+        }
+
+        &__text-input{
+            width: 70%;
+        }
+
+        &__text-button{
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 520px){
+        &__text-button{
+            font-size: 14px;
+            padding: 19px 15px;
+        }
+        &__text-title{
+            font-size: 35px;
+        }
+        &__text-subtitle{
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        &__text-input{
+            font-size: 16px;
+        }
+    }
+}

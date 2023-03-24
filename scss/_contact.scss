@@ -1,0 +1,123 @@
+.contact {
+    padding-top: 85px;
+    background: #91916C;
+
+    &__title {
+        font-family: 'Nunito Sans', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 139%;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: white;
+        position: relative;
+        margin-bottom: 109px;
+
+        &::after {
+            content: "";
+            width: 288px;
+            bottom: -24px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border: 3px solid white;
+            position: absolute;
+        }
+    }
+
+    &__wrapper-title {
+        font-family: 'Playfair Display', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 139%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        margin-bottom: 92px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-input {
+        height: 58px;
+        font-family: 'Nunito Sans';
+        font-size: 20px;
+        line-height: 135.5%;
+        color: #FFFFFF;
+        background: rgba(225, 225, 194, 0.4);
+        border-radius: 8px;
+        padding-left: 25px;
+
+        &::placeholder {
+            color: white;
+        }
+    }
+
+    &__wrapper-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper-button {
+        font-family: 'Nunito Sans', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 135.5%;
+        color: #FFFFFF;
+        padding: 16px 0px;
+        background: #E5A985;
+        border-radius: 8px;
+    }
+
+    &__wrapper-firstname,
+    &__wrapper-lastname {
+        width: 50%;
+    }
+
+    &__wrapper-email,
+    &__wrapper-subject {
+        width: 609px;
+        margin-bottom: 27px;
+    }
+
+    &__wrapper-firstname {
+        margin-right: 7px;
+    }
+
+    &__wrapper-fullname {
+        display: flex;
+        margin-bottom: 27px;
+    }
+
+
+    @media screen and (max-width: 1074px) {
+        & {
+            padding-bottom: 60px;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__wrapper {
+            justify-content: center;
+        }
+
+        &__wrapper-email,
+        &__wrapper-subject {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 642px) {
+        &__wrapper-title{
+            font-size: 40px;
+        }
+    }
+}

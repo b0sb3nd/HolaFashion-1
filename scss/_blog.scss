@@ -1,0 +1,91 @@
+.blog {
+    padding: 73px 0 80px 0px;
+    background: #FFEFE7;
+
+    &__title {
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 139%;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #BD957E;
+        position: relative;
+        margin-bottom: 96px;
+
+        &::after {
+            content: "";
+            width: 288px;
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border: 3px solid #B38F79;
+        }
+    }
+
+    &__subtitle {
+        font-family: 'Playfair Display', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 139%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #795744;
+        margin-bottom: 85px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__wrapper-item-subtitle {
+        text-align: center;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 24px;
+        line-height: 150.5%;
+        letter-spacing: 0.02em;
+        color: #333333;
+    }
+
+    &__wrapper-item {
+        text-align: center;
+        margin-bottom: 20px;
+        flex: 1 1 33.33%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    @media screen and (max-width: 810px) {
+        &__wrapper-item {
+
+            &:nth-child(2),
+            &:nth-child(5) {
+                margin: 0 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 592px){
+        &__wrapper-item {
+            margin-bottom: 20px;
+
+            &:nth-child(2),
+            &:nth-child(5) {
+                margin: 0 0 20px 0;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        &__wrapper{
+            flex-direction: column;
+        }
+    }
+}

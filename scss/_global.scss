@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Playfair+Display:wght@700&family=Poppins:wght@700&display=swap');
+
+.container{
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex: 1 1 auto;
+    margin-top: 110px;
+}
+
+body.active{
+    overflow: hidden;
+}
