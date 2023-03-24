@@ -64,6 +64,7 @@
             z-index: 99;
             background: #fff;
             transition: left .5s ease;
+            -webkit-overflow-scrolling:touch;
 
             &.active{
                 transition: left .5s ease;

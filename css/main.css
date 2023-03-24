@@ -172,6 +172,7 @@ body.active {
     -webkit-transition: left 0.5s ease;
     -o-transition: left 0.5s ease;
     transition: left 0.5s ease;
+    -webkit-overflow-scrolling: touch;
   }
   .header__nav.active {
     -webkit-transition: left 0.5s ease;
