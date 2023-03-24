@@ -2,7 +2,8 @@ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.brow
 
 const burger = document.querySelector(".header__burger"),
       menu = document.querySelector(".header__nav"),
-      scrollLinks = document.querySelectorAll(".scroll-link");
+      scrollLinks = document.querySelectorAll(".scroll-link"),
+      html = document.querySelector("html")
 
 scrollLinks.forEach(item => {
     item.addEventListener("click",() => {
@@ -11,10 +12,12 @@ scrollLinks.forEach(item => {
 })
 
 burger.addEventListener("click", () => {
-    if (burger.classList.contains("active") && menu.classList.contains("active") && document.body.classList.contains("active")){
-        document.body.classList.remove("active"); burger.classList.remove("active"); menu.classList.remove("active");
+    if (burger.classList.contains("active") && menu.classList.contains("active") && html.classList.contains("active")){
+        html.classList.remove("active"); burger.classList.remove("active"); menu.classList.remove("active");
+        html.style.cssText = `overflow: auto`
     }else{
-        burger.classList.add("active"); menu.classList.add("active"); document.body.classList.add("active")
+        html.style.cssText = `overflow: hidden`
+        html.classList.add("active"); burger.classList.add("active"); menu.classList.add("active");
     }
 })
 
