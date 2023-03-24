@@ -14,9 +14,9 @@ scrollLinks.forEach(item => {
 burger.addEventListener("click", () => {
     if (burger.classList.contains("active") && menu.classList.contains("active") && html.classList.contains("active")){
         html.classList.remove("active"); burger.classList.remove("active"); menu.classList.remove("active");
-        html.style.cssText = `overflow: auto`
+        document.body.style.cssText = `position: static;`
     }else{
-        html.style.cssText = `overflow: hidden`
+        document.body.style.cssText = `position: fixed;`
         html.classList.add("active"); burger.classList.add("active"); menu.classList.add("active");
     }
 })
